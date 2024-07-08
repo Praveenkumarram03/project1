@@ -41,14 +41,16 @@ public class BankTransfer {
         System.out.print("Enter your choice: ");
         int choice = scanner.nextInt();
 
-        switch (choice) {
+    switch (choice) {
             case 1:
-                transaction.checkBalance();
-            case 2:
-                System.out.print("Enter amount to transfer: ");
+            	System.out.print("Enter amount to transfer: ");
                 transaction.amount = scanner.nextDouble();
                 transaction.fundTransfer();
-                break;
+              
+            case 2:
+            	  transaction.checkBalance();
+            	  break;
+               
                  default:
                 System.out.println("Invalid choice");
                 break;
